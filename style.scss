@@ -1,0 +1,35 @@
+body{
+    margin: 4rem;
+}
+
+input{
+    width: 5rem;
+    height: 2rem;
+    background-color: rgb(145, 252, 252);
+    text-align: center;
+}
+
+.calculator{
+    width: 20rem;
+    border: red solid 1px;
+
+    .calculator__screen{
+        border: red 2px solid;
+    }
+
+    .numbersAndBasicOp{
+        display: flex;
+        flex-direction: row;
+    }
+            .numbers{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap-reverse;
+            }
+
+            .basic__operators__right{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+}
