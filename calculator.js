@@ -75,14 +75,19 @@ const buttonsLength= buttonsCalculator.length
 console.log(buttonsCalculator);
 console.log(buttonsLength);
 
+
 for (let i = 0; i < buttonsLength; i++) {
-    buttonsCalculator[i].addEventListener("click", event  =>{
+    buttonsCalculator[i].addEventListener("click", calcul)
+    textView.innerHTML= event.target.value;
+    }
+    calcul (event) => {
         textView.innerHTML= event.target.value;
-        console.log(event.target.value)
+
+     alert(event.target.value)
         console.log(textView);
-    })
+    }
     
-}
+
 
 
 
