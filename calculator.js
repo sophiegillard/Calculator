@@ -78,8 +78,7 @@ console.log(buttonsLength);
 for (let i = 0; i < buttonsLength; i++) {
     buttonsCalculator[i].addEventListener("click", event  =>{
         textView.innerHTML= event.target.value;
-
-     alert(event.target.value)
+        console.log(event.target.value)
         console.log(textView);
     })
     
