@@ -78,49 +78,40 @@ console.log(buttonsLength);
 
 for (let i = 0; i < buttonsLength; i++) {
     buttonsCalculator[i].addEventListener("click", calcul)
-    textView.innerHTML= event.target.value;
     }
-    calcul (event) => {
-        textView.innerHTML= event.target.value;
 
-     alert(event.target.value)
-        console.log(textView);
+
+function calcul (event, num) {
+    const value= event.target.value;
+    console.log(textView);
+    switch(value)
+        {
+        case "AC":
+            document.querySelector(".textView").innerHTML = "";
+            console.log("AC was clicked");
+            break;
+        case "+":
+            console.log("+ was clicked");
+            document.querySelector(".textView").innerHTML = sum(computeResult(value) + Math.floor(textView.textContent));
+            break;
+        case "-":
+            console.log("- was clicked");
+            break;
+        case "*":
+            console.log("* was clicked");
+            break;
+        case "/":
+            console.log("/ was clicked");
+            break;
+         case "=":
+            console.log("= was clicked");
+            document.querySelector(".textView").innerHTML = computeResult(value);
+            break;
+        default:
+        console.log("%s was clicked", value);
+        document.querySelector(".textView").innerHTML += value;
     }
-    
-
-
-
-
-//Display calcul in screen
-function clearDisplay(){
-    document.querySelector(".textView").innerHTML = "";
 }
 
 
-// const buttons = document.querySelectorAll("input[type=button]");
-//        const length = buttons.length;
-//        for (let i = 0; i < length; i++)
-//            {
-//                buttons[i].addEventListener("click", handle);
-//            }
-//        function handle(event)
-//        {
-//            const value = event.target.value;
-//            switch(value)
-//            {
-//                case "+":
-//                    console.log("+ was clicked");
-//                    break;
-//                case "-":
-//                    console.log("- was clicked");
-//                    break;
-//                case "*":
-//                    console.log("+ was clicked");
-//                    break;
-//                case "/":
-//                    console.log("/ was clicked");
-//                    break;
-//                default:
-//                //console.log("%s was clicked", value);
-//                var myInput = document.getElementById("equal");
-//            }
+

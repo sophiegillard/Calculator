@@ -15,6 +15,7 @@ input {
 }
 .calculator .calculator__screen {
   border: red 2px solid;
+  height: 2rem;
 }
 .calculator .numbersAndBasicOp {
   display: flex;
