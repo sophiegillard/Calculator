@@ -4,18 +4,49 @@ body{
 
 input{
     width: 5rem;
-    height: 2rem;
-    background-color: rgb(145, 252, 252);
+    height: 4rem;
+    background-color:#fae1dd;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px #b5a3a0;
+    font-family: 'Rubik', sans-serif;
+    font-size: larger;
+   
 }
 
 .calculator{
     width: 20rem;
-    border: red solid 1px;
+    background-color: #fcd5ce;
+    border-radius: 10px;
 
     .calculator__screen{
-        border: red 2px solid;
-        height: 2rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        background-color:#fdf0ee;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 1px #b5a3a0;
+
+        span{
+            margin: 1rem;
+            font-size: large;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+    
+        }
+        .textView{
+            font-weight: 400; 
+    
+        }
+    }
+
+    .calculator__board{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .numbersAndBasicOp{

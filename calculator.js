@@ -12,7 +12,11 @@ var textView= document.createElement('span');
 textView.className='textView';
 calculatorScreen.appendChild(textView);
 textView.setAttribute('type', 'text');
-textView.setAttribute('placeholder', '0');
+
+var textResult= document.createElement('span');
+textResult.className='textResult';
+calculatorScreen.appendChild(textResult);
+textResult.setAttribute('type', 'text');
 
 //CALCULOTAR BOARD
 //Function to create the operators
@@ -74,44 +78,46 @@ let buttonsCalculator = document.querySelectorAll("input[type=button]");
 const buttonsLength= buttonsCalculator.length
 console.log(buttonsCalculator);
 console.log(buttonsLength);
-
+let calculScreen =  document.querySelector(".textView");
+let resultScreen =  document.querySelector(".textResult");
 
 for (let i = 0; i < buttonsLength; i++) {
     buttonsCalculator[i].addEventListener("click", calcul)
     }
 
-
-function calcul (event, num) {
+function computeResult(str){
+    return Function('return ' + str)()
+    }
+    
+function calcul (event) {
     const value= event.target.value;
     console.log(textView);
     switch(value)
         {
         case "AC":
-            document.querySelector(".textView").innerHTML = "";
-            console.log("AC was clicked");
-            break;
-        case "+":
-            console.log("+ was clicked");
-            document.querySelector(".textView").innerHTML = sum(computeResult(value) + Math.floor(textView.textContent));
-            break;
-        case "-":
-            console.log("- was clicked");
-            break;
-        case "*":
-            console.log("* was clicked");
-            break;
-        case "/":
-            console.log("/ was clicked");
+            calculScreen.innerHTML = "";
+            resultScreen.innerHTML = "";
             break;
          case "=":
             console.log("= was clicked");
-            document.querySelector(".textView").innerHTML = computeResult(value);
+            let num = textView.innerHTML;
+            console.log(num);
+            console.log(computeResult(num));
+            resultScreen.innerHTML = "=" + computeResult(num);
             break;
         default:
         console.log("%s was clicked", value);
-        document.querySelector(".textView").innerHTML += value;
+        calculScreen.innerHTML += value;
+        break;
     }
 }
 
+// FUNCTION TO DELETE THE LAST DIGIT INSERTED
+
+document.body.addEventListener("keyup", deleteLastDigit =>{
+    if (deleteLastDigit.code ==='Backspace'){
+        console.log('it works');
+    }
+})
 
 
