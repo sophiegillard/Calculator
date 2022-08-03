@@ -1,6 +1,13 @@
 body {
   margin: 4rem;
 }
+@media only screen and (max-width: 400px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+}
 
 input {
   width: 5rem;
@@ -12,16 +19,29 @@ input {
   font-family: "Rubik", sans-serif;
   font-size: larger;
 }
+@media only screen and (max-width: 400px) {
+  input {
+    width: 20vw;
+    height: 100px;
+  }
+}
 
 .calculator {
   width: 20rem;
   background-color: #fcd5ce;
   border-radius: 10px;
 }
-.calculator .calculator__screen {
-  height: 5rem;
+@media only screen and (max-width: 400px) {
+  .calculator {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.calculator__screen {
+  height: 15rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
@@ -29,30 +49,49 @@ input {
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px #b5a3a0;
 }
-.calculator .calculator__screen span {
+@media only screen and (max-width: 400px) {
+  .calculator__screen {
+    height: 50%;
+  }
+}
+.calculator__screen .textHistoryUl {
+  font-weight: 100;
+  color: grey;
+  list-style: none;
+}
+.calculator__screen span {
   margin: 1rem;
   font-size: large;
   font-family: "Rubik", sans-serif;
   font-weight: 600;
 }
-.calculator .calculator__screen .textView {
+.calculator__screen .textView {
   font-weight: 400;
 }
-.calculator .calculator__board {
+
+.calculator__board {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.calculator .numbersAndBasicOp {
+@media only screen and (max-width: 400px) {
+  .calculator__board {
+    height: 50%;
+  }
+}
+
+.numbersAndBasicOp {
   display: flex;
   flex-direction: row;
 }
-.calculator .numbers {
+
+.numbers {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
 }
-.calculator .basic__operators__right {
+
+.basic__operators__right {
   display: flex;
   flex-direction: column-reverse;
 }/*# sourceMappingURL=style.css.map */
