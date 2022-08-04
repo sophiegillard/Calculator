@@ -3,6 +3,8 @@ I created a calculator using HTML, CSS and JS.
 
 It is a basic calculator with basic operators such as "+", "-", "/", "*" and "%".
 
+Here is the link to my calculator: https://sophiegillard.github.io/Calculator/
+
 ## The process
 I created all the html part in JS. 
 I created the divs and the spans manually and then all the inputs/buttons are created with a loop. I gave a value to each input so that each buttons can directly take this value in the calculator.
