@@ -19,5 +19,6 @@ I created a history too.
 
 ## Issues
 I still have issues to have a correct design in the mobile view as the flexboxes are not efficient.
+I wanted to focus on the javascript functions more than on the design.
 
 The history is not done. I would like to add a button on the left top corner to erase the history.
